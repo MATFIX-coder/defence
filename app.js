@@ -134,7 +134,7 @@ const DATA = [
         ]
       }
     ],
-    "headerImage": "assets/header.png?v=20260529-7"
+    "headerImage": "assets/header.png?v=20260529-8"
   },
   {
     "id": "april-advanced",
@@ -247,36 +247,36 @@ const DATA = [
         ]
       }
     ],
-    "headerImage": "assets/header.png?v=20260529-7"
+    "headerImage": "assets/header.png?v=20260529-8"
   },
   {
     "id": "may",
     "title": "Майская защита",
-    "desc": "Новая вкладка: product, permutations, функции, координаты, строки, списки, словари, матрицы и нестандартная фильтрация.",
-    "heroImage": "assets/may-defense.png?v=20260529-7",
+    "desc": "Новая вкладка: функции, координаты, строки, списки, словари, матрицы, перебор вариантов и нестандартная фильтрация.",
+    "heroImage": "assets/may-defense.png?v=20260529-8",
     "groups": [
       {
         "title": "Майские задачи",
         "tasks": [
           {
             "title": "Слова из букв МАЙ с повторениями",
-            "text": "Составить все возможные слова длины 3 из букв МАЙ. Буквы могут повторяться. Использовать product().",
+            "text": "Составить все возможные слова длины 3 из букв МАЙ. Буквы могут повторяться.",
             "answer": "ОТВЕТ: 27 слов",
-            "code": "# 1. Слова из букв МАЙ с повторениями\n# Составить все возможные слова длины 3 из букв МАЙ. Буквы могут повторяться.\n# Использовать product().\n# ОТВЕТ: 27 слов\nfrom itertools import product\n\nletters = 'МАЙ'\n\nres = []\n\nfor word in product(letters, repeat=3):\n    res.append(''.join(word))\n\nprint(res)\nprint(len(res))",
+            "code": "# 1. Слова из букв МАЙ с повторениями\n# Составить все возможные слова длины 3 из букв МАЙ. Буквы могут повторяться.\n# ОТВЕТ: 27 слов\nfrom itertools import product\n\nletters = 'МАЙ'\n\nres = []\n\nfor word in product(letters, repeat=3):\n    res.append(''.join(word))\n\nprint(res)\nprint(len(res))",
             "data": "letters = 'МАЙ'",
             "tags": [
-              "product",
+              "перебор вариантов",
               "комбинаторика"
             ]
           },
           {
             "title": "Слова из букв МАЙ без повторений",
-            "text": "Составить все возможные слова из букв МАЙ. Буквы не могут повторяться. Использовать permutations().",
+            "text": "Составить все возможные слова из букв МАЙ. Буквы не могут повторяться.",
             "answer": "ОТВЕТ: ['МАЙ', 'МЙА', 'АМЙ', 'АЙМ', 'ЙМА', 'ЙАМ']",
-            "code": "# 2. Слова из букв МАЙ без повторений\n# Составить все возможные слова из букв МАЙ. Буквы не могут повторяться. Использовать\n# permutations().\n# ОТВЕТ: ['МАЙ', 'МЙА', 'АМЙ', 'АЙМ', 'ЙМА', 'ЙАМ']\nfrom itertools import permutations\n\nletters = 'МАЙ'\n\nres = []\n\nfor word in permutations(letters):\n    res.append(''.join(word))\n\nprint(res)",
+            "code": "# 2. Слова из букв МАЙ без повторений\n# Составить все возможные слова из букв МАЙ. Буквы не могут повторяться.\n# ОТВЕТ: ['МАЙ', 'МЙА', 'АМЙ', 'АЙМ', 'ЙМА', 'ЙАМ']\nfrom itertools import permutations\n\nletters = 'МАЙ'\n\nres = []\n\nfor word in permutations(letters):\n    res.append(''.join(word))\n\nprint(res)",
             "data": "letters = 'МАЙ'",
             "tags": [
-              "permutations"
+              "перебор вариантов"
             ]
           },
           {
@@ -305,7 +305,7 @@ const DATA = [
             "text": "Написать функцию kv(x), которая проверяет, является ли число полным квадратом. Найти полные квадраты от 0 до 200, у которых сумма цифр нечётная.",
             "answer": "ОТВЕТ: [1, 9, 16, 25, 36, 49, 81, 100, 144]",
             "code": "# 5. Полные квадраты с нечётной суммой цифр\n# Написать функцию kv(x), которая проверяет, является ли число полным квадратом. Найти\n# полные квадраты от 0 до 200, у которых сумма цифр нечётная.\n# ОТВЕТ: [1, 9, 16, 25, 36, 49, 81, 100, 144]\ndef kv(x):\n    return int(x ** 0.5) ** 2 == x\n\n\nres = []\n\nfor n in range(0, 201):\n    if kv(n):\n        if sum(map(int, str(abs(n)))) % 2 == 1:\n            res.append(n)\n\nprint(res)",
-            "data": "def kv(x):\n    return int(x ** 0.5) ** 2 == x",
+            "data": "",
             "tags": [
               "функции",
               "полный квадрат"
@@ -316,7 +316,7 @@ const DATA = [
             "text": "Если число — полный квадрат, умножить на 3. Если делится на 7 — разделить на 7. Если оканчивается на 3 или 8 — прибавить 5. Иначе — вычесть 1. Найти сумму результатов для чисел от 1 до 80.",
             "answer": "ОТВЕТ: 3316",
             "code": "# 6. Функция may_action\n# Если число — полный квадрат, умножить на 3. Если делится на 7 — разделить на 7. Если\n# оканчивается на 3 или 8 — прибавить 5. Иначе — вычесть 1. Найти сумму результатов для\n# чисел от 1 до 80.\n# ОТВЕТ: 3316\ndef kv(x):\n    return int(x ** 0.5) ** 2 == x\n\n\ndef may_action(n):\n    if kv(n):\n        return n * 3\n    elif n % 7 == 0:\n        return n // 7\n    elif n % 10 in [3, 8]:\n        return n + 5\n    else:\n        return n - 1\n\n\nsm = 0\n\nfor n in range(1, 81):\n    sm += may_action(n)\n\nprint(sm)",
-            "data": "def kv(x):\n    return int(x ** 0.5) ** 2 == x",
+            "data": "",
             "tags": [
               "функции",
               "условия"
@@ -451,12 +451,12 @@ const DATA = [
           },
           {
             "title": "Пары участников без порядка",
-            "text": "Есть участники: Екатерина Игоревна, Андрей Александрович, Дима, Майский инспектор. Составить все пары участников без учёта порядка. Использовать combinations().",
+            "text": "Есть участники: Екатерина Игоревна, Андрей Александрович, Дима, Майский инспектор. Составить все пары участников без учёта порядка.",
             "answer": "ОТВЕТ: 6 пар",
-            "code": "# 19. Пары участников без порядка\n# Есть участники: Екатерина Игоревна, Андрей Александрович, Дима, Майский инспектор.\n# Составить все пары участников без учёта порядка. Использовать combinations().\n# ОТВЕТ: 6 пар\nfrom itertools import combinations\n\npeople = [\n    'Екатерина Игоревна',\n    'Андрей Александрович',\n    'Дима',\n    'Майский инспектор'\n]\n\nres = []\n\nfor pair in combinations(people, 2):\n    res.append(pair)\n\nprint(res)\nprint(len(res))",
+            "code": "# 19. Пары участников без порядка\n# Есть участники: Екатерина Игоревна, Андрей Александрович, Дима, Майский инспектор.\n# Составить все пары участников без учёта порядка.\n# ОТВЕТ: 6 пар\nfrom itertools import combinations\n\npeople = [\n    'Екатерина Игоревна',\n    'Андрей Александрович',\n    'Дима',\n    'Майский инспектор'\n]\n\nres = []\n\nfor pair in combinations(people, 2):\n    res.append(pair)\n\nprint(res)\nprint(len(res))",
             "data": "people = [\n    'Екатерина Игоревна',\n    'Андрей Александрович',\n    'Дима',\n    'Майский инспектор'\n]",
             "tags": [
-              "combinations"
+              "перебор вариантов"
             ]
           },
           {
@@ -485,7 +485,7 @@ const DATA = [
             "text": "Найти все простые числа от 2 до 100, которые оканчиваются на 3 или 7.",
             "answer": "ОТВЕТ: 13 чисел",
             "code": "# 22. Простые числа\n# Найти все простые числа от 2 до 100, которые оканчиваются на 3 или 7.\n# ОТВЕТ: 13 чисел\ndef prost(x):\n    return x != 1 and all(x % d != 0 for d in range(2, x))\n\n\nres = []\n\nfor n in range(2, 101):\n    if prost(n):\n        if n % 10 in [3, 7]:\n            res.append(n)\n\nprint(res)\nprint(len(res))",
-            "data": "def prost(x):\n    return x != 1 and all(x % d != 0 for d in range(2, x))",
+            "data": "",
             "tags": [
               "простые числа"
             ]
@@ -657,7 +657,7 @@ const DATA = [
         ]
       }
     ],
-    "headerImage": "assets/may-defense.png?v=20260529-7"
+    "headerImage": "assets/may-defense.png?v=20260529-8"
   }
 ];
 
@@ -708,7 +708,7 @@ function setHeroImage(sectionId) {
   const section = DATA.find(item => item.id === sectionId);
   if (!section || !heroImage) return;
 
-  heroImage.src = section.headerImage || 'assets/header.png?v=20260529-7';
+  heroImage.src = section.headerImage || 'assets/header.png?v=20260529-8';
   heroImage.alt = section.title;
 }
 
