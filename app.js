@@ -134,7 +134,7 @@ const DATA = [
         ]
       }
     ],
-    "headerImage": "assets/header.png?v=20260529-8"
+    "headerImage": "assets/header.png?v=20260529-9"
   },
   {
     "id": "april-advanced",
@@ -247,13 +247,13 @@ const DATA = [
         ]
       }
     ],
-    "headerImage": "assets/header.png?v=20260529-8"
+    "headerImage": "assets/header.png?v=20260529-9"
   },
   {
     "id": "may",
     "title": "Майская защита",
     "desc": "Новая вкладка: функции, координаты, строки, списки, словари, матрицы, перебор вариантов и нестандартная фильтрация.",
-    "heroImage": "assets/may-defense.png?v=20260529-8",
+    "heroImage": "assets/may-defense.png?v=20260529-9",
     "groups": [
       {
         "title": "Майские задачи",
@@ -284,7 +284,7 @@ const DATA = [
             "text": "Сгенерировать пары точек (x, y), где x и y от 0 до 5. Оставить только точки, где x и y не равны 0, а сумма координат не больше 7.",
             "answer": "ОТВЕТ: 19 точек",
             "code": "# 3. Координаты с ограничением суммы\n# Сгенерировать пары точек (x, y), где x и y от 0 до 5. Оставить только точки, где x и y\n# не равны 0, а сумма координат не больше 7.\n# ОТВЕТ: 19 точек\nres = []\n\nfor x in range(0, 6):\n    for y in range(0, 6):\n        if x != 0 and y != 0:\n            if x + y <= 7:\n                res.append((x, y))\n\nprint(res)\nprint(len(res))",
-            "data": "x_range = range(0, 6)\ny_range = range(0, 6)",
+            "data": "",
             "tags": [
               "координаты"
             ]
@@ -294,7 +294,7 @@ const DATA = [
             "text": "Сгенерировать пары точек (x, y), где x и y от -5 до 5. Оставить только точки в кольце: 5 <= x ** 2 + y ** 2 <= 25.",
             "answer": "ОТВЕТ: 68 точек",
             "code": "# 4. Точки в кольце\n# Сгенерировать пары точек (x, y), где x и y от -5 до 5. Оставить только точки в кольце:\n# 5 <= x ** 2 + y ** 2 <= 25.\n# ОТВЕТ: 68 точек\nres = []\n\nfor x in range(-5, 6):\n    for y in range(-5, 6):\n        if 5 <= x ** 2 + y ** 2 <= 25:\n            res.append((x, y))\n\nprint(res)\nprint(len(res))",
-            "data": "x_range = range(-5, 6)\ny_range = range(-5, 6)",
+            "data": "",
             "tags": [
               "координаты",
               "геометрия"
@@ -560,7 +560,7 @@ const DATA = [
             "text": "Найти все пары (x, y), где x и y от 0 до 8, обе координаты чётные, но точка не лежит на диагонали x == y.",
             "answer": "ОТВЕТ: 20 точек",
             "code": "# 29. Чётные координаты сектора\n# Найти все пары (x, y), где x и y от 0 до 8, обе координаты чётные, но точка не лежит\n# на диагонали x == y.\n# ОТВЕТ: 20 точек\nres = []\n\nfor x in range(0, 9):\n    for y in range(0, 9):\n        if x % 2 == 0 and y % 2 == 0:\n            if x != y:\n                res.append((x, y))\n\nprint(res)\nprint(len(res))",
-            "data": "x_range = range(0, 9)\ny_range = range(0, 9)",
+            "data": "",
             "tags": [
               "координаты",
               "вложенные циклы"
@@ -626,7 +626,7 @@ const DATA = [
             "text": "Посчитать количество пар (a, b), где a и b от 1 до 80, сумма a + b делится на 7, а произведение a * b оканчивается на 2 или 8.",
             "answer": "ОТВЕТ: 220 пар",
             "code": "# 35. Пары координат для маяка\n# Посчитать количество пар (a, b), где a и b от 1 до 80, сумма a + b делится на 7, а\n# произведение a * b оканчивается на 2 или 8.\n# ОТВЕТ: 220 пар\ncnt = 0\n\nfor a in range(1, 81):\n    for b in range(1, 81):\n        if (a + b) % 7 == 0:\n            if (a * b) % 10 in [2, 8]:\n                cnt += 1\n\nprint(cnt)",
-            "data": "a_range = range(1, 81)\nb_range = range(1, 81)",
+            "data": "",
             "tags": [
               "вложенные циклы",
               "пары"
@@ -657,7 +657,7 @@ const DATA = [
         ]
       }
     ],
-    "headerImage": "assets/may-defense.png?v=20260529-8"
+    "headerImage": "assets/may-defense.png?v=20260529-9"
   }
 ];
 
@@ -708,7 +708,7 @@ function setHeroImage(sectionId) {
   const section = DATA.find(item => item.id === sectionId);
   if (!section || !heroImage) return;
 
-  heroImage.src = section.headerImage || 'assets/header.png?v=20260529-8';
+  heroImage.src = section.headerImage || 'assets/header.png?v=20260529-9';
   heroImage.alt = section.title;
 }
 
