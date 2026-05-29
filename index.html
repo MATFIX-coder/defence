@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Апрельская и Майская защита – задачи по Python</title>
+  <link rel="stylesheet" href="styles.css?v=20260529-7" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__image-wrap">
+      <img id="heroImage" src="assets/header.png?v=20260529-6" alt="Апрельская защита" class="hero__image" />
+    </div>
+    <div class="hero__content">
+      <p class="eyebrow">Тренажёр для защиты</p>
+      <h1>Python-задачи: Апрельская и Майская защита</h1>
+      <p class="subtitle">Карточки с условием, входными данными, ответом и раскрывающимся решением. Входные данные можно копировать сразу в Python.</p>
+      <div class="hero__stats">
+        <span id="totalTasks">0 задач</span>
+        <span>product / permutations / функции / строки / списки / матрицы</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="toolbar">
+    <div class="tabs" id="tabs"></div>
+    <div class="tools">
+      <input id="searchInput" type="search" placeholder="Поиск по задачам" />
+      <button id="toggleAnswersBtn">Скрыть ответы</button>
+      <button id="openAllBtn">Показать решения</button>
+      <button id="closeAllBtn">Скрыть решения</button>
+    </div>
+
+    <div class="staff-gate" id="staffGate">
+      <label for="employeeCodeInput">Код сотрудника</label>
+      <input id="employeeCodeInput" type="password" inputmode="text" autocomplete="off" placeholder="Введите код" />
+      <button id="unlockBtn">Открыть ответы</button>
+      <button id="lockBtn" class="lock-btn">Закрыть</button>
+      <span id="accessStatus" class="access-status">режим ученика</span>
+    </div>
+  </nav>
+
+  <main class="layout">
+    <aside class="side-panel">
+      <h2>Структура</h2>
+      <p>Апрель – база. Май – следующий уровень сложности: генерация вариантов, функции, фильтрация данных.</p>
+      <div class="legend">
+        <span><b class="dot dot-blue"></b> условие</span>
+        <span><b class="dot dot-green"></b> входные данные</span>
+        <span><b class="dot dot-orange"></b> ответ</span>
+        <span><b class="dot dot-purple"></b> решение</span>
+      </div>
+      <div class="note">
+        <strong>Правило:</strong> если в задаче есть готовый список, строка, матрица, алфавит или имена – они вынесены отдельным блоком для копирования.
+      </div>
+    </aside>
+
+    <section class="content">
+      <div id="sections"></div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast">Скопировано</div>
+
+  <script src="app.js?v=20260529-7"></script>
+</body>
+</html>
